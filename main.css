@@ -1,0 +1,380 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+html {
+  font-size: 62.5%;
+  font-weight: 300;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+body, button, input, textarea {
+  color: #555555;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 300;
+}
+button:focus, input:focus, textarea:focus {
+  outline-color: #555555;
+}
+/*navigation*/
+.navigation {
+  background-color: rgba(255, 255, 255, .95);
+  height: 100px;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+}
+.site-logo {
+  height: 80px;
+  margin: 1rem;
+}
+.top-nav {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 1100px;
+  z-index: 100;
+}
+.top-nav a {
+  color: #555555;
+}
+.top-nav li:last-of-type a {
+  color: #FFFFFF;
+}
+.top-nav > ul {
+  align-items: center;
+  display: flex;
+  list-style: none;
+}
+.top-nav li {
+  font-size: 1.6rem;
+  margin: 0 20px;
+  text-transform: uppercase;
+}
+.top-nav li:last-of-type {
+  background-color: #8CC63F;
+  border-radius: 100px;
+  color: #FFFFFF;
+  padding: 5px 12px;
+}
+.mobile-menu {
+  display: none;
+}
+/* carousel */
+.carousel {
+  height: 500px;
+  position: relative;
+  top: 100px;
+}
+.image1, .image2, .image3 {
+  background: no-repeat center top;
+  background-size: cover;
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  transition: opacity 1s linear;
+  width: 100%;
+  z-index: 1;
+}
+.image1 {
+  background-image: url(./img/bg1.jpg);
+}
+.image2 {
+  background-image: url(./img/bg2.jpg);
+}
+.image3 {
+  background-image: url(./img/bg3.jpg);
+}
+.active {
+  opacity: 1;
+}
+.left-arrow, .right-arrow {
+  background-color: rgba(255, 255, 255, .9);
+  border-radius: 100px;
+  cursor: pointer;
+  display: inline-block;
+  height: 50px;
+  line-height: 50px;
+  opacity: .75;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  transition: all .5s ease;
+  width: 50px;
+  z-index: 5;
+}
+.left-arrow {
+  left: 0;
+  opacity: 0;
+}
+.left-arrow-show {
+  left: 25px;
+  opacity: .75;
+}
+.right-arrow {
+  opacity: 0;
+  right: 0px;
+}
+.right-arrow-show {
+  right: 25px;
+  opacity: .75;
+}
+/* cards */
+.cards {
+  height: 500px;
+  margin: 0 auto;
+  max-width: 1100px;
+  position: relative;
+}
+.card1, .card2, .card3 {
+  background-color: rgba(255, 255, 255, .95);
+  border-radius: 4px;
+  bottom: 80px;
+  margin: 0 15px 0 0;
+  max-width: 450px;
+  position: absolute;
+  transition: left 1s ease;
+  z-index: 10;
+}
+.card1 {
+  left: -1500px;
+}
+.card2 {
+  left: -1500px;
+}
+.card3 {
+  left: -1500px;
+}
+.active-card {
+  left: 15px;
+}
+.card-head {
+  background-color: rgba(0, 0, 0, .1);
+  font-size: 2.4rem;
+  line-height: 2.4rem;
+  padding: 10px 25px;
+}
+.card-body {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  padding: 25px 25px;
+  text-align: justify;
+}
+/* description */
+.description {
+  position: relative;
+  margin: 0 auto;
+  max-width: 1100px;
+  padding: 0 15px;
+  text-align: center;
+  top: 100px;
+}
+.description-anchor {
+  position: relative;
+  top: -100px;
+}
+.description > h2 {
+  font-size: 4rem;
+  font-weight: 300;
+  padding: 30px 0 20px 0;
+  text-transform: uppercase;
+}
+.description p {
+  line-height: 2.4rem;
+  margin: 10px 0;
+  text-align: justify;
+}
+/* nearby */
+.nearby {
+  background-image: url(./img/bg-town-1.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 30px 0;
+  position: relative;
+  top: 100px;
+}
+.nearby > ul {
+  align-items: top;
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto;
+  max-width: 1100px;
+}
+.nearby i {
+  position: relative;
+  transition: all .3s linear;
+  top: 0px;
+}
+.nearby i:hover {
+  top: -10px;
+}
+.nearby li {
+  max-width: 300px;
+  padding: 40px 0;
+  text-align: center;
+}
+.nearby-description {
+  color: #FFFFFF;
+  line-height: 2.4rem;
+  margin: 20px 0 0 0;
+}
+.nearby h3 {
+  color: #FFFFFF;
+  font-size: 2rem;
+  font-weight: 300;
+  margin: 20px 0 0 0;
+  text-transform: uppercase;
+}
+/* plans */
+.plans {
+  margin: 0 auto;
+  max-width: 1100px;
+  position: relative;
+  text-align: center;
+  top: 100px;
+}
+.plans-anchor {
+  position: relative;
+  top: -100px;
+}
+.plans h2 {
+  font-size: 4rem;
+  font-weight: 300;
+  padding: 0 0 20px 0;
+  text-transform: uppercase;
+}
+.plans-images {
+  display: flex;
+  justify-content: space-around;
+}
+.plans-images h3 {
+  font-size: 2rem;
+  font-weight: 300;
+  margin: 0 0 20px 0;
+}
+.ground-floor, .second-floor {
+  padding: 20px 0;
+  width: 50%;
+}
+.plans img {
+  cursor: pointer;
+  width: 90%;
+}
+/* contact form */
+.contact {
+  background-color: #8CC63F;
+  margin: 20px 0;
+  padding: 40px;
+  position: relative;
+  top: 100px;
+}
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1100px;
+}
+.contact-email, .contact-telephone, .contact-message {
+  border: none;
+  border-radius: 4px;
+  margin: 10px 0;
+  padding: 10px;
+}
+.contact-email, .contact-telephone {
+  width: 49%;
+}
+.contact-message {
+  resize: none;
+  height: 150px;
+  width: 100%;
+}
+.contact-send-button {
+  background-color: #FFFFFF;
+  border: none;
+  border-radius: 100px;
+  font-weight: 500;
+  margin: 0 auto;
+  padding: 10px 50px;
+}
+.contact h2 {
+  color: #FFFFFF;
+  font-size: 4rem;
+  font-weight: 300;
+  padding: 0 0 20px 0;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+}
+/* copyrigth */
+.copyright {
+  font-weight: 500;
+  margin: 20px auto;
+  max-width: 1100px;
+  position: relative;
+  text-align: center;
+  top: 100px;
+}
+/* modal */
+.fog {
+  background-color: rgba(0, 0, 0, .6);
+  height: 100%;
+  opacity: 1;
+  position: fixed;
+  text-align: center;
+  top: 0;
+  transition: all .3s linear;
+  width: 100%;
+  z-index: 200;
+}
+.fog-destroy {
+  display: none;
+}
+.fog-hide {
+  opacity: 0;
+}
+.modal {
+  background-color: #FFFFFF;
+  display: inline-block;
+  margin: 5vh auto;
+  max-width: 1100px;
+  position: relative;
+  width: auto;
+}
+.modal img {
+  max-width: 1100px;
+  max-height: 90vh;
+}
+.close {
+  cursor: pointer;
+  position: absolute;
+  right: 3px;
+  top: 3px;
+}
+@media (max-width: 880px) {
+  .top-nav > ul {
+    display: none;
+  }
+  .left-arrow, .right-arrow {
+    display: none;
+  }
+  .mobile-menu {
+    display: block;
+    position: absolute;
+    right: 30px;
+  }
+  .nearby > ul {
+    flex-direction: column;
+  }
+  .plans-images {
+    flex-direction: column;
+    align-items: center;
+  }
+}
